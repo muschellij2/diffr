@@ -1,0 +1,25 @@
+# (uncomment to add a dependency)
+dependencies:
+  - name: jquery
+    version: 1.11.1
+    src: "htmlwidgets/lib/codediff"
+    script:
+      - jquery.min.js
+  - name: highlight
+    version: 8.9.1
+    src: "htmlwidgets/lib/codediff"
+    script:
+      - highlight.min.js
+  - name: difflib
+    version: 1.0
+    src: "htmlwidgets/lib/codediff"
+    script:
+      - difflib.js
+  - name: codediff
+    version: 1.0
+    src: "htmlwidgets/lib/codediff"
+    script:
+      - codediff.js
+    stylesheet:
+      - codediff.css
+      - googlecode.css
