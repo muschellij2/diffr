@@ -22,18 +22,20 @@ HTMLWidgets.widget({
     console.log(el.id);
     var myid = '#' + el.id;
     console.log(myid);
-    el.append(
-      $(myid).append(
+    console.log(x);
+    console.log(x.wordWrap);
+    //el.html(
+      $(myid).html(
         codediff.buildView(x.f1, x.f2, {
           beforeName: x.file1,
           afterName: x.file2,
           contextSize: x.contextSize,
           minJumpSize: x.minJumpSize,
           wordWrap: x.wordWrap
-        }
+        })
       )
-    )
-    );
+    //)
+    ;
 /*
 $(el).append(
         codediff.buildView(x.f1, x.f2, {

@@ -1,8 +1,12 @@
 Package: rdiff
-Title: Display Differences between R Code
-Version: 0.0.0.9000
+Title: Display Differences between Two Files
+Version: 0.0.1
 Authors@R: person("John", "Muschelli", email = "muschellij2@gmail.com", role = c("aut", "cre"))
-Description: Wraps codediff to an htmlwidget in R for diffs.
-Depends: R (>= 3.2.2)
+Description: Wraps codediff JavaScript library to an htmlwidget in R for differences of 2 files.
+Depends:
+    R (>= 3.2.2)
+Imports:
+    htmlwidgets
 License: GPL-2
 LazyData: true
+RoxygenNote: 5.0.0
