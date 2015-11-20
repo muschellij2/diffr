@@ -1,6 +1,6 @@
 HTMLWidgets.widget({
 
-  name: 'rdiff',
+  name: 'diffr',
 
   type: 'output',
 
