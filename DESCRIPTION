@@ -1,8 +1,9 @@
 Package: diffr
-Title: Display Differences between Two Files
+Title: Display Differences between Two Files using Codediff
 Version: 0.0.1
 Authors@R: person("John", "Muschelli", email = "muschellij2@gmail.com", role = c("aut", "cre"))
-Description: Wraps codediff JavaScript library to an htmlwidget in R for differences of 2 files.
+Description: Wraps codediff JavaScript library to an htmlwidget in R for differences of 2 files,
+  usually text files or R scripts.
 Depends:
     R (>= 3.2.2)
 Imports:
