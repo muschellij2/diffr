@@ -1,4 +1,4 @@
-Package: rdiff
+Package: diffr
 Title: Display Differences between Two Files
 Version: 0.0.1
 Authors@R: person("John", "Muschelli", email = "muschellij2@gmail.com", role = c("aut", "cre"))

@@ -19,15 +19,15 @@
 #'
 #' @export
 #' @examples
-#' library(rdiff)
+#' library(diffr)
 #' file1 = tempfile()
 #' writeLines("hello, world!\n", con = file1)
 #' file2 = tempfile()
 #' writeLines(paste0(
 #' "hello world?\nI don't get it\n",
 #' paste0(sample(letters, 65, replace = TRUE), collapse = "")), con = file2)
-#' rdiff(file1, file2, before = "f1", after = "f2")
-rdiff <- function(file1, file2,
+#' diffr(file1, file2, before = "f1", after = "f2")
+diffr <- function(file1, file2,
                   contextSize = 3,
                   minJumpSize = 10,
                   wordWrap = TRUE,
@@ -53,23 +53,23 @@ rdiff <- function(file1, file2,
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'rdiff',
+    name = 'diffr',
     x,
     width = width,
     height = height,
-    package = 'rdiff'
+    package = 'diffr'
   )
 }
 
-#' Wrapper functions for using rdiff in shiny
+#' Wrapper functions for using diffr in shiny
 #'
-#' Use \code{rdiffOutput} to create a UI element, and \code{renderRdiff}
+#' Use \code{diffrOutput} to create a UI element, and \code{renderDiffr}
 #' to render the diff.
 #'
 #' @param outputId Output variable to read from
 #' @param width,height The width and height of the diff (see
 #'   \code{\link[htmlwidgets]{shinyWidgetOutput}})
-#' @param expr An expression that generates a \code{\link{rdiff}} object
+#' @param expr An expression that generates a \code{\link{diffr}} object
 #' @param env The environment in which to evaluate \code{expr}
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
@@ -79,7 +79,7 @@ rdiff <- function(file1, file2,
 #' @export
 #' @examples
 #' \donttest{
-#' library(rdiff)
+#' library(diffr)
 #' library(shiny)
 #' file1 = tempfile()
 #' writeLines("hello, world!\n", con = file1)
@@ -89,28 +89,28 @@ rdiff <- function(file1, file2,
 #' paste0(sample(letters, 65, replace = TRUE), collapse = "")), con = file2)
 #'
 #' ui <- fluidPage(
-#'   h1("A rdiff demo"),
+#'   h1("A diffr demo"),
 #'   checkboxInput("wordWrap", "Word Wrap",
 #'      value = TRUE),
-#'    rdiffOutput("exdiff")
+#'    diffrOutput("exdiff")
 #' )
 #'
 #' server <- function(input, output, session) {
-#'   output$exdiff <- renderRdiff({
-#'     rdiff(file1, file2, wordWrap = input$wordWrap,
+#'   output$exdiff <- renderDiffr({
+#'     diffr(file1, file2, wordWrap = input$wordWrap,
 #'     before = "f1", after = "f2")
 #'   })
 #' }
 #'
 #' shinyApp(ui, server)
 #' }
-rdiffOutput <- function(outputId, width = '100%', height = '400px'){
-  shinyWidgetOutput(outputId, 'rdiff', width, height, package = 'rdiff')
+diffrOutput <- function(outputId, width = '100%', height = '400px'){
+  shinyWidgetOutput(outputId, 'diffr', width, height, package = 'diffr')
 }
 
-#' @rdname rdiffOutput
+#' @rdname diffrOutput
 #' @export
-renderRdiff <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderDiffr <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  shinyRenderWidget(expr, rdiffOutput, env, quoted = TRUE)
+  shinyRenderWidget(expr, diffrOutput, env, quoted = TRUE)
 }
