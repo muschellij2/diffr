@@ -13,3 +13,5 @@ LazyData: true
 RoxygenNote: 5.0.0
 Suggests:
   shiny
+BugReports: https://github.com/muschellij2/diffr/issues
+URL: https://github.com/danvk/codediff.js
