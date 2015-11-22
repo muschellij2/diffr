@@ -1,8 +1,9 @@
 Package: diffr
 Title: Display Differences Between Two Files using Codediff Library
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("John", "Muschelli", email = "muschellij2@gmail.com", role = c("aut", "cre"))
-Description: An R interface to the 'codediff' JavaScript library (a copy of which is included in the package).
+Description: An R interface to the 'codediff' JavaScript library (a copy of which is included in the package,
+  see <https://github.com/danvk/codediff.js> for information).
   Allows for visualization of the difference between 2 files, usually text files or R scripts, in a browser.
 Depends:
     R (>= 3.0)
@@ -14,4 +15,4 @@ RoxygenNote: 5.0.0
 Suggests:
   shiny
 BugReports: https://github.com/muschellij2/diffr/issues
-URL: https://github.com/danvk/codediff.js
+
