@@ -3,3 +3,4 @@
 
 README.md
 ^img/diffr-example\.png$
+^\.travis\.yml$

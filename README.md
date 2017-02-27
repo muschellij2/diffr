@@ -1,3 +1,5 @@
+[![Travis-CI Build Status](https://travis-ci.org/muschellij2/diffr.svg?branch=master)](https://travis-ci.org/muschellij2/diffr)
+
 R package for creating code differences in JavaScript based on:
 
 https://github.com/danvk/codediff.js
