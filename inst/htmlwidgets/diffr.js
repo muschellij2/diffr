@@ -13,7 +13,7 @@ HTMLWidgets.widget({
   },
 
   renderValue: function(el, x, instance) {
-
+    document.body.style.overflow = "auto";
     /*
     el.innerText = x.message;
     el.innerText = x.file1;
