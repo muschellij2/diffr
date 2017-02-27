@@ -44,4 +44,3 @@ writeLines(paste0(
 paste0(sample(letters, 65, replace = TRUE), collapse = "")), con = file2)
 diffr(file1, file2, before = "f1", after = "f2")
 }
-
