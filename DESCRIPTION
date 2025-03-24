@@ -10,7 +10,6 @@ Depends:
 Imports:
     htmlwidgets
 License: GPL-2
-LazyData: true
 RoxygenNote: 7.3.2
 Suggests:
   shiny
