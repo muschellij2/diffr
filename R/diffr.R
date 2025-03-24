@@ -12,8 +12,8 @@
 #' To wrap at word boundaries instead, set this option.
 #' @param before Text to display on file1
 #' @param after Text to display on file2
-#' @param width passed to \code{\link{createWidget}}
-#' @param height passed to \code{\link{createWidget}}
+#' @param width passed to \code{\link[htmlwidgets]{createWidget}}
+#' @param height passed to \code{\link[htmlwidgets]{createWidget}}
 #'
 #' @import htmlwidgets
 #'

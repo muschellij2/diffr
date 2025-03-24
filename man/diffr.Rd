@@ -36,9 +36,9 @@ To wrap at word boundaries instead, set this option.}
 
 \item{after}{Text to display on file2}
 
-\item{width}{passed to \code{\link{createWidget}}}
+\item{width}{passed to \code{\link[htmlwidgets]{createWidget}}}
 
-\item{height}{passed to \code{\link{createWidget}}}
+\item{height}{passed to \code{\link[htmlwidgets]{createWidget}}}
 }
 \description{
 Takes the diff of 2 files and shows comparisons
