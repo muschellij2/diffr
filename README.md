@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/muschellij2/diffr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/muschellij2/diffr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `diffr` is an R package for creating code differences in
