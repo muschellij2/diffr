@@ -4,3 +4,4 @@
 README.md
 ^img/diffr-example\.png$
 ^\.travis\.yml$
+^cran-comments\.md$
